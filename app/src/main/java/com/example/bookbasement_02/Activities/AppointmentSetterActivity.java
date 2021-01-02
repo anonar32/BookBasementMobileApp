@@ -182,7 +182,7 @@ public class AppointmentSetterActivity extends AppCompatActivity implements View
                                         .setContentIntent(pendingIntent)
                                         .build();
                                 notificationManager.notify(1, notification);
-                                Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 getBaseContext().startActivity(intent);
                                 sDialog.dismissWithAnimation();
@@ -252,7 +252,7 @@ public class AppointmentSetterActivity extends AppCompatActivity implements View
                                         .setContentIntent(pendingIntent)
                                         .build();
                                 notificationManager.notify(1, notification);
-                                Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 getBaseContext().startActivity(intent);
                                 sDialog.dismissWithAnimation();
@@ -324,7 +324,7 @@ public class AppointmentSetterActivity extends AppCompatActivity implements View
                                         .setContentIntent(pendingIntent)
                                         .build();
                                 notificationManager.notify(1, notification);
-                                Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 getBaseContext().startActivity(intent);
                                 sDialog.dismissWithAnimation();

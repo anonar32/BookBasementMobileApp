@@ -1,10 +1,8 @@
 package com.example.bookbasement_02.Activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -34,7 +32,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.tapadoo.alerter.Alerter;
 
 import java.util.HashMap;
 
@@ -207,7 +204,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             getBaseContext().startActivity(intent);
                                             finish();
                                         } else if(userType.equals("Normal")){
-                                            Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                            Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                             getBaseContext().startActivity(intent);
                                             finish();
@@ -248,7 +245,7 @@ public class RegisterActivity extends AppCompatActivity {
                 getBaseContext().startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getBaseContext().startActivity(intent);
                 finish();

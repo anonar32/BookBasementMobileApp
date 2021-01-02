@@ -15,8 +15,6 @@ import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.example.bookbasement_02.Constants.URL;
-import com.example.bookbasement_02.Models.CartList;
-import com.example.bookbasement_02.Models.FirebaseUsers;
 import com.example.bookbasement_02.Models.Users;
 import com.example.bookbasement_02.R;
 import com.example.bookbasement_02.RestApi.Api;
@@ -25,11 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;
@@ -145,12 +139,12 @@ public class LoginActivity extends AppCompatActivity {
                                             getBaseContext().startActivity(intent);
                                             finish();
                                         } else if(URL.USER_TYPE.equals("Normal")){
-                                            Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                            Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                             getBaseContext().startActivity(intent);
                                             finish();
                                         }else{
-                                            Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                                            Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                             getBaseContext().startActivity(intent);
                                             finish();
@@ -191,7 +185,7 @@ public class LoginActivity extends AppCompatActivity {
                 getBaseContext().startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(getBaseContext(), ContainerActivity2.class);
+                Intent intent = new Intent(getBaseContext(), ContainerActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getBaseContext().startActivity(intent);
                 finish();

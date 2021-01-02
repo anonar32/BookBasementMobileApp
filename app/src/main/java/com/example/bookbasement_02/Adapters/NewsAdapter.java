@@ -59,41 +59,19 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         String colorTextDate =  "#FFFFFF";
 
         if (title.equals("buy")) {
-            colorTextTitle = "#2D82B5";
-            colorTextDate = "#FB6602";
             content = "Thank You for buying from Book Basement \n" +
                     "We look forward for your next purchase.\n";
-            newsViewHolder.img_user.setImageResource(R.drawable.uservoyager);
         }else if(title.equals("sell")){
-            colorTextTitle = "#D87F81";
-            colorTextDate = "#fcba03";
             content = "Thank You for selling your book \n" +
                     "We're sure many readers would enjoy this too..\n";
-            newsViewHolder.img_user.setImageResource(R.drawable.circul6);
         }else if(title.equals("donate")){
             content = "Thank You for donating your book. \n" +
                     "Hope to see you soon.\n";
-            colorTextTitle = "#C73866";
-            colorTextDate = "#FE676E";
-            newsViewHolder.img_user.setImageResource(R.drawable.useillust);
         }else{
             content = "Thank You for setting-up an appointment. \n" +
                     "Hope to see you soon.\n";
-            colorTextTitle = "#C73866";
-            colorTextDate = "#FE676E";
-            newsViewHolder.img_user.setImageResource(R.drawable.useillust);
-        }
-        if(status.equals("pending")){
-            newsViewHolder.status.setBackgroundColor(parseColor("#097bed"));
-        }else if(status.equals("done")){
-            newsViewHolder.status.setBackgroundColor(parseColor("#11ba57"));
-        }else if(status.equals("cancel")){
-            newsViewHolder.status.setBackgroundColor(parseColor("#eb0000"));
-        }
 
-        newsViewHolder.purpose.setTextColor(parseColor(colorTextTitle));
-
-        newsViewHolder.dateAndTime.setTextColor(parseColor(colorTextDate));
+        }
 
         newsViewHolder.img_user.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.fade_transition_animation));
         newsViewHolder.container.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.fade_scale_animation));

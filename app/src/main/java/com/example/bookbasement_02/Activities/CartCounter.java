@@ -28,8 +28,8 @@ public class CartCounter {
     private TextView textView;
     private Api api = new Api();
     private Context context;
-    private ContainerActivity2 containerActivity2;
-    public CartCounter (View view, final Context context, ContainerActivity2 containerActivity2){
+    private ContainerActivity containerActivity2;
+    public CartCounter (View view, final Context context, ContainerActivity containerActivity2){
         imageView = view.findViewById(R.id.cart_notification_id);
         textView = view.findViewById(R.id.cart_count_notificiation);
         cardView = view.findViewById(R.id.cart_card_count_id);

@@ -59,12 +59,12 @@
             android:hint="Type a message..."
             android:layout_toLeftOf="@id/send_btn"
             android:layout_centerVertical="true"/>
-        
+
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/send_btn"
-            android:background="@drawable/ic_action_name"
+            android:background="@drawable/send"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true" />
     </RelativeLayout>

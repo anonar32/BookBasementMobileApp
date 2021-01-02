@@ -18,12 +18,9 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
-import com.example.bookbasement_02.Activities.ContainerActivity2;
 import com.example.bookbasement_02.Activities.EditProfileActivity;
-import com.example.bookbasement_02.Activities.GenreSearchActivity;
 import com.example.bookbasement_02.Adapters.ProfileAdapter;
 import com.example.bookbasement_02.Constants.URL;
-import com.example.bookbasement_02.Models.CartList;
 import com.example.bookbasement_02.Models.FirebaseUsers;
 import com.example.bookbasement_02.Models.Users;
 import com.example.bookbasement_02.R;

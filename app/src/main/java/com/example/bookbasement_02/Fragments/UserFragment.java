@@ -57,7 +57,7 @@ public class UserFragment extends Fragment {
                     FirebaseUsers user = dataSnapshot.getValue(FirebaseUsers.class);
                     assert user != null;
                     assert firebaseUser != null;
-                    if(!user.getId().equals(firebaseUser.getUid()) && !user.getType().equals("Recycling Facility")){
+                    if(!user.getId().equals(firebaseUser.getUid()) && user.getType().equals("Normal")){
                         usersList.add(user);
                     }
                 }

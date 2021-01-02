@@ -61,43 +61,46 @@ public class NotificationCounter {
                 if (!response.isSuccessful()) {
 
                 }
+
                 List<Appointment> newsItems = response.body();
                 String notifcationMessage = "";
                 for (Appointment appointment: newsItems) {
-                        if(appointment.getStatus().equalsIgnoreCase("pending")) {
+                        if(appointment.getStatus().equalsIgnoreCase("not read")) {
                             notifcationMessage += "=========================\n" +
                                     "Date: " + appointment.getDate() + " " + appointment.getTime() + " \n Location: " + appointment.getLocation() + "\n Purpose: " + appointment.getPurpose() + "" +
                                     "\n";
                             count++;
                         }
-                        if(count > 0){
-                            textView.setText(count+"");
-                            cardView.setVisibility(View.VISIBLE);
-                        }else {
-                            textView.setText("");
-                            cardView.setVisibility(View.GONE);
-                        }
                 }
+
+                if(count > 0){
+                    textView.setText(count+"");
+                    cardView.setVisibility(View.VISIBLE);
+                }else {
+                    textView.setText("");
+                    cardView.setVisibility(View.GONE);
+                }
+
                 Intent intent1 = new Intent(mContext, NotificationListActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent1, 0);
 
                 Bitmap largeIcon = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.book_view);
-                if(newsItems.size() > 0){
-                    Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_1_ID)
-                            .setSmallIcon(R.drawable.calendar)
-                            .setContentTitle("Added to appointments")
-                            .setContentText("Thank you for making an appointments")
-                            .setLargeIcon(largeIcon)
-                            .setStyle(new NotificationCompat.BigTextStyle()
-                                    .bigText(notifcationMessage)
-                                    .setBigContentTitle("You have appointments on")
-                                    .setSummaryText("Summary Text"))
-                            .setPriority(NotificationCompat.PRIORITY_HIGH)
-                            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                            .setContentIntent(pendingIntent)
-                            .build();
-                    notificationManager.notify(1, notification);
-                }
+//                if(newsItems.size() > 0){
+//                    Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_1_ID)
+//                            .setSmallIcon(R.drawable.calendar)
+//                            .setContentTitle("Added to appointments")
+//                            .setContentText("Thank you for making an appointments")
+//                            .setLargeIcon(largeIcon)
+//                            .setStyle(new NotificationCompat.BigTextStyle()
+//                                    .bigText(notifcationMessage)
+//                                    .setBigContentTitle("You have appointments on")
+//                                    .setSummaryText("Summary Text"))
+//                            .setPriority(NotificationCompat.PRIORITY_HIGH)
+//                            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+//                            .setContentIntent(pendingIntent)
+//                            .build();
+//                    notificationManager.notify(1, notification);
+//                }
 
             }
 

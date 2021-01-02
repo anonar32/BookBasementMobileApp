@@ -60,6 +60,7 @@ public class MessageContainerActivity extends AppCompatActivity {
             @Override
             public void onDataChange (@NonNull DataSnapshot snapshot) {
                 FirebaseUsers firebaseUser = snapshot.getValue(FirebaseUsers.class);
+                assert firebaseUser != null;
                 usernameTextView.setText(firebaseUser.getUsername());
                 if(firebaseUser.getImageURL().equals("default")){
                     circleImageView.setImageResource(R.drawable.profile);

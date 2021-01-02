@@ -29,6 +29,10 @@
             android:icon="@drawable/message"
             android:title="Messages" />
         <item
+            android:id="@+id/contact_id"
+            android:icon="@drawable/contact"
+            android:title="ContactUs" />
+        <item
             android:id="@+id/donate_book_id"
             android:icon="@drawable/donate"
             android:title="Donate Book" />

@@ -28,6 +28,9 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="title_activity_container2">Container</string>
+    <string name="chat"><u>Chat with us</u></string>
+    <string name="email"><u>bookbasement@gmail.com</u></string>
+
     <string-array name="month_names">
         <item>January</item>
         <item>February</item>
@@ -42,13 +45,13 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+
     <string-array name="location">
         <item>Ayala Center Cebu</item>
         <item>SM City Cebu</item>
         <item>University Of Banilad</item>
         <item>Banilad Town Centre</item>
     </string-array>
-
     <string-array name="type">
         <item>Normal</item>
         <item>Recycling Facility</item>

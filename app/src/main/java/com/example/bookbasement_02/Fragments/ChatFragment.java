@@ -78,7 +78,8 @@ public class ChatFragment extends Fragment {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     FirebaseUsers user = dataSnapshot.getValue(FirebaseUsers.class);
                    for(ChatList chatList: chatLists){
-                       if(user.getId().equals(chatList.getId()) && !user.getType().equals("Recycling Facility")){
+                       assert user != null;
+                       if(user.getId().equals(chatList.getId()) && user.getType().equals("Normal")){
                            mUsers.add(user);
                        }
                    }
