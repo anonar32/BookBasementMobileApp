@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "300448125778",
+    "firebase_url": "https://chat-book-basement.firebaseio.com",
+    "project_id": "chat-book-basement",
+    "storage_bucket": "chat-book-basement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300448125778:android:b769bfd415e44b1b03608b",
+        "android_client_info": {
+          "package_name": "com.example.bookbasement_02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300448125778-r3md391lo0mi59irdtgu1llkcd1jil3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1_Zby0pa_gkSkt4iZNhFsHoa8RM9YlFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300448125778-r3md391lo0mi59irdtgu1llkcd1jil3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
